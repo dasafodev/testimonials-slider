@@ -1,0 +1,23 @@
+{
+  "name": "coding-bootcamp-testimonials-slider-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsforeroa/testimonials-slider.git"
+  },
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "author": "Santiago Forero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsforeroa/testimonials-slider/issues"
+  },
+  "homepage": "https://github.com/dsforeroa/testimonials-slider#readme"
+}
