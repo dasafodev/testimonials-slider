@@ -1,7 +1,91 @@
+//Layout
+$width-mobile:375px;
+$width-desktop:1440px;
+
+//Colors
+
+$color-dark-blue:hsl(240, 38%, 20%);
+$color-white:white;
+$color-grayish-blue: hsl(240, 18%, 77%);
 
 
-$color:red;
+//Typography
 
-body{
-    background-color: $color;
+$font-size:32px;
+$font-family: 'Inter',
+sans-serif;
+$font-light:300;
+$font-medium:500;
+$font-bold:700;
+
+body {
+    background-color: $color-white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width-desktop;
+    padding: 0;
+    background: url("./../images/pattern-curve.svg") left bottom no-repeat;
+    // url("./../images/pattern-bg.svg") right center no-repeat ;
+
+}
+
+.attribution {
+    text-align: center;
+}
+
+.container-slide {
+    height: 100vh;
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.text,
+.image {
+    align-self: center;
+
+}
+
+.text {
+    margin-right: -50px;
+    z-index: 2;
+    font-family: $font-family;
+    justify-self: end;
+    color: $color-dark-blue;
+}
+
+.description {
+    font-weight: $font-light;
+    font-size: $font-size;
+
+}
+
+.label {
+    color: $color-grayish-blue;
+}
+
+.label strong {
+    color: $color-dark-blue;
+}
+
+.image {
+    z-index: 1;
+}
+
+.photo .image-background{
+    position: absolute;
+}
+.photo{
+    z-index: 1;
+}
+.image-background{
+    z-index: -1;
 }

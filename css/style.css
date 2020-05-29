@@ -1,5 +1,71 @@
 body {
-  background-color: red;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding: 0;
+  background: url("./../images/pattern-curve.svg") left bottom no-repeat;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.container-slide {
+  height: 100vh;
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.text,
+.image {
+  align-self: center;
+}
+
+.text {
+  margin-right: -50px;
+  z-index: 2;
+  font-family: "Inter", sans-serif;
+  justify-self: end;
+  color: #202046;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.label {
+  color: #babacf;
+}
+
+.label strong {
+  color: #202046;
+}
+
+.image {
+  z-index: 1;
+}
+
+.photo .image-background {
+  position: absolute;
+}
+
+.photo {
+  z-index: 1;
+}
+
+.image-background {
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
