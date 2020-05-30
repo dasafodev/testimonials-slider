@@ -26,7 +26,8 @@ body {
     padding: 0;
 }
 
-.container, .attribution{
+.container,
+.attribution {
     margin-left: auto;
     margin-right: auto;
     max-width: $width-desktop;
@@ -41,6 +42,8 @@ body {
 .slide {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description photo";
+
     height: 100%;
 }
 
@@ -51,6 +54,7 @@ body {
 }
 
 .text {
+    grid-area: description;
     margin-right: -50px;
     z-index: 2;
     font-family: $font-family;
@@ -60,14 +64,14 @@ body {
     top: 0;
     left: 0;
 }
-.image-quotes{
+
+.image-quotes {
     position: absolute;
     top: -40px;
     left: 100px;
 }
 
 .description {
-    
     font-weight: $font-light;
     font-size: $font-size;
 
@@ -82,11 +86,12 @@ body {
 }
 
 .image {
+    grid-area: photo;
     position: relative;
     top: 0;
     left: 0;
-    height: 540px ;
-    
+    height: 540px;
+
 }
 
 // .photo .image-background{
@@ -96,6 +101,9 @@ body {
     z-index: 1;
     position: absolute;
     border-radius: 5px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
 
 }
 
@@ -104,6 +112,9 @@ body {
     position: relative;
     top: -65px;
     left: -70px;
+    width: 100%;
+    // max-width: 550px;
+    height: auto;
 
 }
 
@@ -111,16 +122,17 @@ body {
     text-align: center;
     font-family: $font-family;
     background-color: $color-dark-blue;
-    color: $color-grayish-blue ;
+    color: $color-grayish-blue;
     padding: 1em;
-    
-}
-.attribution a{
-    // text-decoration: none;
-    color: $color-grayish-blue ;
+
 }
 
-.controls{
+.attribution a {
+    // text-decoration: none;
+    color: $color-grayish-blue;
+}
+
+.controls {
     z-index: 2;
     position: absolute;
     bottom: -25px;
@@ -133,4 +145,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@media (max-width:320px){
+    .container, .attribution{
+    max-width: $width-mobile;
+
+    }
+    .slide {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "photo" "description";
+        height: 100%;
+    }
+    .text{
+        margin: 0;
+    }
 }
