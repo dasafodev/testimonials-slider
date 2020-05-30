@@ -4,20 +4,15 @@ body {
   padding: 0;
 }
 
-.container {
+.container, .attribution {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  padding: 0;
-  background: url("./../images/pattern-curve.svg") left bottom no-repeat;
-}
-
-.attribution {
-  text-align: center;
 }
 
 .container-slide {
   height: 100vh;
+  background: url("./../images/pattern-curve.svg") left bottom no-repeat;
 }
 
 .slide {
@@ -37,6 +32,15 @@ body {
   font-family: "Inter", sans-serif;
   justify-self: end;
   color: #202046;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image-quotes {
+  position: absolute;
+  top: -40px;
+  left: 100px;
 }
 
 .description {
@@ -53,19 +57,50 @@ body {
 }
 
 .image {
-  z-index: 1;
-}
-
-.photo .image-background {
-  position: absolute;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 540px;
 }
 
 .photo {
   z-index: 1;
+  position: absolute;
+  border-radius: 5px;
 }
 
 .image-background {
   z-index: -1;
+  position: relative;
+  top: -65px;
+  left: -70px;
+}
+
+.attribution {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  background-color: #202046;
+  color: #babacf;
+  padding: 1em;
+}
+
+.attribution a {
+  color: #babacf;
+}
+
+.controls {
+  z-index: 2;
+  position: absolute;
+  bottom: -25px;
+  left: 40px;
+  background-color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */
